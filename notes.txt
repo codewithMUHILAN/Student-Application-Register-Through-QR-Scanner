@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Sathak Apllication Form</title>
+<script src="PROJECT.js"></script>
+<link rel="stylesheet" type="text/css" href="PROJECT.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+  
+<style>
+
+.container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    
+    border-radius: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: linear-gradient(to bottom, #AA1E4A 50%, #2174A4  100% );
+    
+  }
+  
+
+.container1{
+    background-color: #ffffff;
+    padding-left: 10px;
+    padding: 8%;
+    border: 1px solid;
+    border-radius: 1%;
+    font-style:unset;   
+  }
+  
+
+.container2{
+    background-color: whitesmoke;
+    padding: 2%;
+    border: 0px solid;
+    border-radius: 0%;
+ }
+  
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: black;
+    
+    padding: 20px;
+    text-decoration: dotted;
+  }
+  
+
+h2{
+    font-style:var(aqua);
+    padding-bottom: 3%;
+  }
+
+
+img{
+    width: 85%;
+    height: 100%;
+  }
+
+
+.section1{
+    width: 800px;
+    height: 100px;
+  }
+
+</style>
+
+<!---------------------------------------------Script------------------>
+
+<script>
+  $(document).ready(function(){
+    $("#CS").change(function(){
+      disableSelect(this);
+    });
+    $("#AC").change(function(){
+      disableSelect(this);
+    });
+    $("#FI").change(function(){
+      disableSelect(this);
+    });
+  })
+
+  
+  function disableSelect (ctrl) {
+    if (ctrl.value != "Types Of Courses" && ctrl.id == "CS") {
+        $("#AC")[0].disabled = true;
+        $("#FI")[0].disabled = true;
+
+    } else if(ctrl.id == "CS") {
+        $("#AC")[0].disabled = false;
+        $("#FI")[0].disabled = false;  
+    }
+
+    if (ctrl.value != "Types Of Courses" && ctrl.id == "AC") {
+        $("#FI")[0].disabled = true;
+        $("#CS")[0].disabled = true;
+
+    } else if(ctrl.id == "AC") {
+        $("#FI")[0].disabled = false;
+        $("#CS")[0].disabled = false;
+    }
+
+    if (ctrl.value != "Types Of Courses" && ctrl.id == "FI") {
+        $("#CS")[0].disabled = true;
+        $("#AC")[0].disabled = true;
+
+    } else if(ctrl.id == "FI") {
+        $("#CS")[0].disabled = false;
+        $("#AC")[0].disabled = false;
+    }
+}
+
+
+function validateSubmit () {
+    var fname = $("#fname")[0];
+    var lname = $("#lname")[0];
+    var Email = $("#Email")[0];
+    var Pnumber = $("#Pnumber")[0];
+    var FTname = $("#FTname")[0];
+    var FTnumber = $("#FTnumber")[0];
+    var Occup = $("#Occup")[0];
+    var MTname = $("#MTname")[0];
+    var MTnumber = $("#MTnumber")[0];
+    var Occup1 = $("#Occup1")[0];
+    var Address = $("#Address")[0];
+    var City = $("#City")[0];
+    var State = $("#State")[0];
+    var PinCode = $("#PinCode")[0];
+    var SHname = $("#SHname")[0];
+    var Marks = $("#Marks")[0];
+    var YOP = $("#YOP")[0];
+    var HSC = $("#HSC")[0];
+    var Marks1 = $("#HSCmarks")[0];
+    var HSCyop = $("#HSCyop")[0];
+
+
+    if (fname.value.trim() == "") {
+        alert("Please enter First Name");
+        return false;
+    }
+
+    if (lname.value.trim() == "") {
+        alert("Please enter Last Name");
+        return false;
+    }
+
+    if (Email.value.trim() == "") {
+        alert("Please enter Email Name");
+        return false;
+    }
+
+    if(Pnumber.value.trim() == "") {
+        alert("Please enter Phone Number")
+        return false;
+    }
+
+    if(FTname.value.trim() == "") {
+        alert("Please enter Father Name")
+        return false;
+    }
+
+    if(FTnumber.value.trim() == ""){
+        alert("Pleace enter Father Number")
+        return false;
+    }
+    
+    if(Occup.value.trim() == ""){
+        alert("Pleace enter Mother Occupation")
+        return false;
+    }
+
+    if(MTname.value.trim() == ""){
+        alert("Pleace enter Mother Name")
+        return false;
+    }
+
+    if(MTnumber.value.trim() == ""){
+        alert("Pleace enter Mother Number")
+        return false;
+    }
+
+    if(Occup1.value.trim() == ""){
+        alert("Pleace enter Father Occupation")
+        return false;
+    }
+
+    if(Address.value.trim() == ""){
+        alert("Pleace enter Address")
+        return false;
+    }
+
+    if(City.value.trim() == ""){
+        alert("Pleace enter City")
+        return false;
+    }
+
+    if(State.value.trim() == ""){
+        alert("Pleace enter State")
+        return false;
+    }
+
+    if(PinCode.value.trim() == ""){
+        alert("Pleace enter Pincode")
+        return false;
+    }
+
+    if(SHname.value.trim() == ""){
+        alert("Pleace enter School Name")
+        return false;
+    }
+
+    if(Marks.value.trim() == ""){
+        alert("Pleace enter SSLC marks")
+        return false;
+    }
+
+    if(YOP.value.trim() == ""){
+        alert("Pleace enter Passed Out Year")
+        return false;
+    }
+
+    if(HSC.value.trim() == ""){
+        alert("Pleace enter School Name")
+        return false;
+    }
+
+    if(HSCmarks.value.trim() == ""){
+        alert("Pleace enter HSC marks")
+        return false;
+    }
+
+    if(HSCyop.value.trim() == ""){
+        alert("Pleace enter Passed Out Year")
+        return false;
+    }
+}
+
+</script>
+
+
+</head>
+
+<body>
+     
+<!----------------------------HEADCONTAINER-------------------------------------------------------------
+---------------------------------------------------------------------------------->
+
+<div class="container" style="width: 1000px; height: 3750px;">
+<form name="frmContact" method="post" action="databaseconnect.php">          
+ <div class="section1">
+    <img src="logo.png" class="logo" style="width: 800px;" height="100px;"> 
+ </div><br>
+
+ <!--------------------------------CONTAINER1--------------------------------------------------
+--------------------------------------------------------------------------------------->
+           
+ <div class="container1">
+
+  <h2>1. Personal Details</h2>
+
+            <!--------------------------------FIRST NAME--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="fname">First name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="fname" name="fname" placeholder="Fname" style="width: 350px;"><br><br>
+    </div>
+
+  </div>
+
+
+            <!--------------------------------LAST NAME!--------------------------------------------------
+--------------------------------------------------------------------------------------->
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="lname">Last name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="lname" name="lname" placeholder="Sname" style="width: 350px;"><br><br>
+    </div>
+
+  </div>
+
+             <!--------------------------------BIRTHDAY--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="birthday">Date of Birth:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="date" id="birthday" min="2000-01-02" name="birthday">
+    </div>
+
+  </div><br>
+
+ <!----------------------------------------GENDER------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="Gender">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label class="Gender-label">Gender:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <label class="Gender-label" for="radio1">
+      <input type="radio" class="Gender-input" id="radio1" name="Gender" value="Male" checked="">Male
+      <input type="radio" class="Gender-input" id="radio2" name="Gender" value="Female">Female 
+      <input type="radio" class="Gender-input" id="radio3" name="Gender" value="Others">Others
+      </label>
+    </div>
+
+  </div>
+  </div><br>
+
+   <!--------------------------------CASTS--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="Casts">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label class="Casts">Caste:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <label class="Casts" for="radio2">
+      <input type="radio" class="Casts-input" id="radio1" name="Casts" value="MBC" checked="">MBC
+      <input type="radio" class="Casts-input" id="radio2" name="Casts" value="BC">BC 
+      <input type="radio" class="Casts-input" id="radio3" name="Casts" value="SC">SC
+      <input type="radio" class="Casts-input" id="radio4" name="Casts" value="ST">ST
+      <input type="radio" class="Casts-input" id="radio5" name="Casts" value="Others">Others
+      </label>
+    </div>
+
+  </div>
+  </div><br>
+
+     <!--------------------------------EMAIL--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Email">Email:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="text" id="Email" name="Email" placeholder="Email" style="width: 350px;"><br><br>
+    </div>
+
+  </div>
+             
+   <!--------------------------------PHONE NUMBER--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Phone Number">Phone Number:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="Pnumber" name="Phone Number" placeholder="Phone Number" style="width: 350px;"><br><br>
+    </div>
+
+  </div>  <br>
+
+          <!--------------------------Attach Student image-------------------------------->
+
+
+  <div class="row">
+            
+    <div class="col-sm-3">
+      <label for="Attach File">Attach Student image:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="file" id="File">
+    </div>
+
+  </div><br><br><br>
+          
+
+
+
+   <!--------------------------------(Parents Details)--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+
+    <h3>(Parents Details)</h3><br>
+          
+   <!--------------------------------FATHER NAME--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="pname">Father name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="FTname" name="Fname" placeholder="Father name" style="width: 350px;"><br><br>
+    </div>
+
+  </div>
+
+   <!--------------------------------PHONE NUMBER--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Phone Number">Phone Number:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="FTnumber" name="Phone Number" placeholder="Phone Number" style="width: 350px;"><br><br>
+    </div>
+
+  </div>  <br>
+
+             <!--------------------------------OCCUPATION--------------------------------------------------
+--------------------------------------------------------------------------------------->
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Occupation">Occupation:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="Ftoccup" name="Occupation" placeholder="Occupation" style="width: 350px;"><br><br>
+    </div>
+
+  </div><br><br>
+
+              <!--------------------------------MOTHER NAME--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Mname">Mother name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="MTname" name="Mother name" placeholder="Mather name" style="width: 350px;"><br><br>
+    </div>
+
+  </div>
+
+   <!--------------------------------PHONE NUMBER--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Phone Number">Phone Number:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="MTnumber" name="Phone Number" placeholder="Phone Number" style="width: 350px;"><br><br>
+    </div>
+
+  </div>  <br>
+
+
+             <!--------------------------------OCCUPATION--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Occupation">Occupation:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="MTOccup" name="Occupation" placeholder="Occupation" style="width: 350px;"><br><br>
+    </div>
+
+  </div><br>
+
+
+
+   <!--------------------------------ADDRESS--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+
+           
+
+  <div class="form-group">
+
+    <div class="col-sm-3">
+      <label for="Address">Address:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <textarea class="form-control" id="Address" rows="5" cols="20"></textarea>
+    </div>   
+
+  </div>
+
+              
+
+              
+   <!--------------------------------CITY--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="City">City:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="City" name="City" style="width: 250px;"><br><br>
+    </div>
+
+  </div>
+
+            
+   <!--------------------------------STATE--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="State">State:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input onkeypress="return /[a-z]/i.test(event.key)" id="State" name="State" style="width: 250px;"><br><br>
+    </div>
+
+  </div>
+
+
+          
+   <!--------------------------------PINCODE--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="PinCode">PinCode:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="PinCode" name="PinCode" maxlength="6" style="width: 250px;"><br><br>
+    </div>
+
+  </div>
+
+        </div>  
+        
+          <!--------------------------------CONTAINER2--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+        
+<div class="container1">
+
+  <h2>2. Education Details</h2>
+
+    <h3>(SSLC Details)</h3>
+
+            
+   <!--------------------------------School Name--------------------------------------------------
+--------------------------------------------------------------------------------------->
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="School Name">School Name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input  id="SHname" name="School Name" style="width: 450px;"><br><br>
+    </div>
+
+  </div>
+
+             <!--------------------------------Marks--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Marks">Marks:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="Marks" name="Marks"><br><br>
+    </div>
+
+  </div>
+
+          
+             <!--------------------------------Year Of Passed--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Year Of Passed">Year Of Passed:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="YOP" name="Year Of Passed"><br><br>
+    </div>
+
+  </div><br>
+
+                      
+             <!--------------------------------Attach File--------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+  <div class="row">
+            
+    <div class="col-sm-3">
+      <label for="Attach File">Attach MarkSheet:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="file" id="File">
+    </div>
+
+  </div><br><br>
+
+  <!------------------------------------HSC Details------------------------------------------------------------------>
+
+      <h3>(HSC Details)</h3>
+
+<!--------------------------------School Name--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+            
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="School Name">School Name:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input  id="HSC" name="School Name" style="width: 450px;"><br><br>
+    </div>
+
+  </div>
+
+
+<!--------------------------------Marks--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Marks">Marks:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="HSCmarks" name="Marks"><br><br>
+    </div>
+
+  </div>
+
+          
+
+<!--------------------------------Year Of Passed--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+  <div class="row">
+
+    <div class="col-sm-3">
+      <label for="Year Of Passed">Year Of Passed:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="number" id="HSCyop" name="Year Of Passed"><br><br>
+    </div>
+
+  </div>
+
+<!--------------------------------Attach File--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+  <div class="row">
+            
+    <div class="col-sm-3">
+      <label for="Attach File">Attach MarkSheet:</label>
+    </div>
+
+    <div class="col-sm-9">
+      <input type="file" id="File">
+    </div>
+
+  </div><br><br>
+
+</div>
+
+        <!--------------------------------CONTAINER3--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+
+<div class="container1">
+
+  <h2>3. Course Offered</h2>
+
+            <!--------------------------------COURSES OFFERED(Computer Science)--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+    <h3>(Computer Science)</h3>
+
+  <select onchange={disableSelect(this)} class="form-control" id="CS" style="width: 500px; height: 50px;">
+
+    <option>Types Of Courses</option>
+    <option>Bachelor of Science (BCA)</option>
+    <option>Bachelor of Science (Computer Science)</option>
+    <option>Bachelor of Science ( Visual Communication)</option>
+    <option>Bachelor of Science ( Electronic Science)</option>
+                
+  </select><br><br>
+              
+    <h3>(Accounting & Finance)</h3>
+
+                          <!--------------------------------COURSES OFFERED(Accounting)--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+ 
+  <select class="form-control" id="AC" style="width: 500px; height: 50px;">
+
+    <option>Types Of Courses</option>
+    <option>Bachelor of Accounts(General)</option>
+    <option>Bachelor of Accounts(Accounting&Finance)</option>
+    <option>Bachelor of Accounts(Computer)</option>
+    <option>Bachelor of Accounts(Corporation secretaryship)</option>
+    <option>Bachelor of Accounts(Bank Management)</option>
+         
+  </select><br><br>
+               
+    <h3>(Life Science)</h3>
+
+                <!--------------------------------COURSES OFFERED(Financial)--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+  <select class="form-control" id="FI" style="width: 500px; height: 50px;">
+
+    <option>Types Of Courses</option>
+    <option>Bachelor of Science(Computer Science)</option>
+    <option>Bachelor of Science(Biochemistry)</option>
+    <option>Bachelor of Science(Microbiology)</option>
+    <option>Bachelor of Science(Biotechnology)</option>
+    <option>Bachelor of Science(Mathematics)</option>
+    <option>Bachelor of Science(Chemistry)</option>
+
+  </select><br><br>
+              
+            
+
+          <!--------------------------------SUBMIT--------------------------------------------------
+---------------------------------------------------------------------------------------> 
+
+
+  <div class="row" >
+  
+    <button type="submit" class="Sub" onclick="{validateSubmit()}"   >SUBMIT</button>    
+  </div>
+
+</div>
+</form>
+
+</div>  
+       
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+body{
+    background-position: center;
+    font-family: serif;
+    font-size: 18px;
+    
+}
+.container{
+        background-color:#006666 ;
+        padding: 10px;
+        border-style: outset;
+        --angle: 0deg;
+        border: 6px solid;
+        border-image: linear-gradient(var(--angle), #54e6e7, #9edfd3, #006666) 1;
+        animation: 3s rotate linear infinite;
+        -webkit-animation: 3s rotate linear infinite;
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.container-fluid{
+    padding-top: 2px;
+    background-color: #006666;
+    
+    
+    
+}
+.img-thumbnail{
+    background-color:#006666 ;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+.container-Info{
+    background-color: #d3d3d3;
+    border-radius: 20px;
+    border-style:ridge;
+    padding: 5px;
+    padding-top: 0px;
+    --angle: 0deg;
+    border: 6px solid;
+    border-image: linear-gradient(var(--angle), #54e6e7, #83992c , #cc612f) 1;
+    animation: 1s rotate linear infinite;
+    -webkit-animation: 1s rotate linear infinite;
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+
+
+.container-SD,.container-PD,.container-AD,.container-ED,.container-CR{
+    background-color:white;
+    padding: 30px;
+    padding-top: 40px;
+    
+    
+}
+
+
+.sslc,.hsc{
+    text-align: center;
+    font-size: 18px;
+ 
+}
+
+
+.title{
+    font-size: 15px;
+    display: flex;
+    justify-content: center; /* Centering Horizantly */
+    align-items: center;
+    padding: 5px;
+}
+h2{
+    font-size:20px;
+}
+
+
+
+@media (min-width: 1024px) {
+    body{
+        font-size: 20px;
+        
+    }
+     .container{
+        background-color: #006666;
+        width: 700px;
+        --angle: 0deg;
+        border: 6px solid;
+        border-image: linear-gradient(var(--angle), #54e6e7, #9edfd3, #006666) 1;
+        animation: 1s rotate linear infinite;
+        -webkit-animation: 1s rotate linear infinite;
+     }
+
+     @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+    }
+    
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+     .title{
+        font-size: x-large;
+     }
+     .container-Info{
+        background-color: #d3d3d3;
+        border-radius: 15px;
+        border-style:ridge;
+        padding: 5px;
+        padding-top: 0px;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        --angle: 0deg;
+        border: 6px solid;
+        border-image: linear-gradient(var(--angle), #54e6e7, #83992c , #cc612f) 1;
+        animation: 1s rotate linear infinite;
+        -webkit-animation: 1s rotate linear infinite;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
+
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+    }
+    
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+    .container{
+        width: 800px;
+    }
+
+    .form-control{
+        width: 400px;
+    }
+
+   
+    
+
+    
+
+}
+@media (max-width:400px) {
+    body{
+        font-size:12px;
+    }
+    .img-thumbnail{
+        width: 450px;
+        height: 70px;
+    }
+    .title{
+        font-size:12px;
+        font-style:solid;
+    }
+    input[type="radio"]{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        box-shadow: 0px 0px 5px #AAC5C6;
+        border: 0.2vw solid rgba(2, 228, 231, 0.8);
+        background-color: #344056;
+        transition: 0.2s all linear;
+        margin-right: 10px;
+        position: relative;
+        top: 4px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        
+    }
+
+    .container-Info{
+        border-radius: 20px;
+       
+}
+    input:checked{
+        border: 0.7vw solid #344056;
+        background-color: rgba(2, 228, 231, 0.8);
+    }
+    .container{
+        --angle: 0deg;
+        border: 6px solid;
+        border-image: linear-gradient(var(--angle), #54e6e7, #9edfd3, #006666) 1;
+        animation: 1s rotate linear infinite;
+        -webkit-animation: 3s rotate linear infinite;
+    }
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+    }
+    
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    .container-Info{
+        --angle: 0deg;
+        border: 6px solid;
+        border-image: linear-gradient(var(--angle), #54e6e7, #9edfd3, #006666) 1 ;
+        animation: 1s rotate linear infinite;
+        -webkit-animation: 3s rotate linear infinite;
+    }
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+    }
+    
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+    
+}

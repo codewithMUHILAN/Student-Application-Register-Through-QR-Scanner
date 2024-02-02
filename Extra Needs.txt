@@ -1,0 +1,151 @@
+  <script>
+    function validateSubmit (){
+      var fn = $("#fn")[0];
+      var ln = $("#ln")[0];
+      var DOB = $("#DOB")[0];
+      var Em = $("#Em")[0];
+      var SMN = $("#SMN")[0];
+      var Simage = $("#Simage")[0];
+      var FTN = $("#FTN")[0];
+      var FTNM = $("#FTNM")[0];
+      var FTO = $("#FTO")[0];
+      var MTN = $("#MTN")[0];
+      var MTNUM = $("#MTNUM")[0];
+      var MTO = $("#MTO")[0];
+      var ADD = $("#ADD")[0];
+      var CTY = $("#CTY")[0];
+      var STE = $("#STE")[0];
+      var PNCD = $("#PNCD")[0];
+      var SHN = $("#SHN")[0];
+      var SSLCMRK = $("#SSLCMRK")[0];
+      var SSLCPSD = $("#SSLCPSD")[0];
+      var SSLCMRKF = $("#SSLCMRKF")[0];
+      var HSCSHN = $("#HSCSHN")[0];
+      var HSCMRK = $("#HSCMRK")[0];
+      var HSCPSD = $("#HSCPSD")[0];
+      var HSCMRKF = $("#HSCMRKF")[0];
+
+      if (fn.value.trim() == ""){
+        alert("Please Enter the First Name");
+        return false;
+      }
+
+      if (ln.value.trim() == ""){
+        alert("Please Enter the Last Name");
+        return false;
+      }
+
+      if (DOB.value.trim() == ""){
+        alert("Please Enter the DOB");
+        return false;
+      }
+
+      if (Em.value.trim() == ""){
+        alert("Please Enter the Email");
+        return false;
+      }
+
+      if (SMN.value.trim() == ""){
+        alert("Please Enter the ST Mobile Number");
+        return false;
+      }
+
+      if (Simage.value.trim() == ""){
+        alert("Please Attach the ST Image");
+        return false;
+      }
+
+      if (FTN.value.trim() == ""){
+        alert("Please Enter the Father Name");
+        return false;
+      }
+
+      if (FTNM.value.trim() == ""){
+        alert("Please Enter the Father Number");
+        return false;
+      }
+
+      if (FTO.value.trim() == ""){
+        alert("Please Enter the Father Occupation");
+        return false;
+      }
+
+      if (MTN.value.trim() == ""){
+        alert("Please Enter the Mother Name");
+        return false;
+      }
+
+      if (MTNUM.value.trim() == ""){
+        alert("Please Enter the Mother Number");
+        return false;
+      }
+
+      if (MTO.value.trim() == ""){
+        alert("Please Enter the Mother Occupation");
+        return false;
+      }
+
+      if (ADD.value.trim() == ""){
+        alert("Please Enter the Address");
+        return false;
+      }
+
+      if (CTY.value.trim() == ""){
+        alert("Please Enter the City");
+        return false;
+      }
+
+      if (STE.value.trim() == ""){
+        alert("Please Enter the State");
+        return false;
+      }
+
+      if (PNCD.value.trim() == ""){
+        alert("Please Enter the Pincode");
+        return false;
+      }
+
+      if (SHN.value.trim() == ""){
+        alert("Please Enter the SSLC School Name");
+        return false;
+      }
+
+      if (SSLCMRK.value.trim() == ""){
+        alert("Please Enter the SSLC Mark");
+        return false;
+      }
+
+      if (SSLCPSD.value.trim() == ""){
+        alert("Please Enter the SSLC Passed Year");
+        return false;
+      }
+
+      if (SSLCMRKF.value.trim() == ""){
+        alert("Please Attach the SSLC MarkSheet");
+        return false;
+      }
+
+      if (HSCSHN.value.trim() == ""){
+        alert("Please Enter the HSC School Name");
+        return false;
+      }
+
+      if (HSCMRK.value.trim() == ""){
+        alert("Please Enter the HSC Mark");
+        return false;
+      }
+
+      if (HSCPSD.value.trim() == ""){
+        alert("Please Enter the HSC Passed Year");
+        return false;
+      }
+
+      if (HSCMRKF.value.trim() == ""){
+        alert("Please Attach the HSC MarkSheet");
+        return false;
+      }
+
+      
+
+    }
+  </script>
